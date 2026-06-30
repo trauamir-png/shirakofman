@@ -42,7 +42,7 @@ export default function HomePage() {
               >
                 {hero.body}
               </p>
-              <div className="flex flex-wrap gap-4 justify-center md:justify-start">
+              <div className="flex flex-wrap gap-4 justify-center">
                 <Link
                   to="/contact"
                   className="text-sm font-medium px-8 py-3.5 text-white transition-all duration-300"
