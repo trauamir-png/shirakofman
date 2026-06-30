@@ -22,7 +22,7 @@ export default function Header() {
       className={`fixed top-0 right-0 left-0 z-50 bg-white transition-shadow duration-300 ${scrolled ? 'shadow-sm' : ''}`}
       style={{ borderBottom: '1px solid #E5E7EB' }}
     >
-      <div className="max-w-7xl mx-auto px-5 md:px-10">
+      <div className="max-w-7xl mx-auto pr-5 pl-8 md:px-10">
         <div className="flex items-center justify-between" style={{ height: '170px' }}>
 
           {/* Logo */}

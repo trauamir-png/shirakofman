@@ -6,6 +6,7 @@ import PracticePage from './pages/PracticePage';
 import MediationPage from './pages/MediationPage';
 import NotaryPage from './pages/NotaryPage';
 import ContactPage from './pages/ContactPage';
+import PrivacyPage from './pages/PrivacyPage';
 
 export default function App() {
   return (
@@ -18,6 +19,7 @@ export default function App() {
           <Route path="/mediation" element={<MediationPage />} />
           <Route path="/notary" element={<NotaryPage />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/privacy-policy" element={<PrivacyPage />} />
         </Route>
       </Routes>
     </BrowserRouter>

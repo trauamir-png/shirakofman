@@ -105,10 +105,21 @@ export default function Footer() {
         </div>
 
         {/* ── Bottom bar ── */}
-        <div className="py-5 flex flex-col sm:flex-row items-center justify-between gap-2 text-center">
-          <p className="text-xs" style={{ color: '#FFFFFF' }}>
-            © כל הזכויות שמורות לשירה קופמן
-          </p>
+        <div className="py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-center">
+          <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-5">
+            <p className="text-xs" style={{ color: '#FFFFFF' }}>
+              © כל הזכויות שמורות לשירה קופמן
+            </p>
+            <Link
+              to="/privacy-policy"
+              className="text-xs transition-colors duration-200"
+              style={{ color: '#64748B' }}
+              onMouseEnter={(e) => (e.currentTarget.style.color = '#FFFFFF')}
+              onMouseLeave={(e) => (e.currentTarget.style.color = '#64748B')}
+            >
+              מדיניות פרטיות
+            </Link>
+          </div>
           <p className="text-xs" style={{ color: '#FFFFFF' }}>
             נבנה על ידי{' '}
             <a
