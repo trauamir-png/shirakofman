@@ -61,15 +61,17 @@ export default function AboutPage() {
                 </div>
               </div>
 
-              <Link
-                to="/contact"
-                className="inline-block text-sm font-medium px-8 py-3.5 text-white transition-all duration-300"
-                style={{ backgroundColor: '#0F172A' }}
-                onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = '#516A73')}
-                onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = '#0F172A')}
-              >
-                לתיאום פגישה
-              </Link>
+              <div className="flex justify-center">
+                <Link
+                  to="/contact"
+                  className="inline-block text-sm font-medium px-8 py-3.5 text-white transition-all duration-300"
+                  style={{ backgroundColor: '#0F172A' }}
+                  onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = '#516A73')}
+                  onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = '#0F172A')}
+                >
+                  לתיאום פגישה
+                </Link>
+              </div>
             </div>
           </div>
         </div>
