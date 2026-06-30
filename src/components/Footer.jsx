@@ -3,19 +3,86 @@ import { nav, siteConfig } from '../data/content';
 
 export default function Footer() {
   return (
-    <footer style={{ backgroundColor: '#0F172A' }}>
+    <footer style={{ backgroundColor: '#0F172A', borderTop: '1px solid rgba(255,255,255,0.08)' }}>
       <div className="max-w-7xl mx-auto px-5 md:px-10">
 
-        {/* ── Main 3-column grid ── */}
+        {/* ── Main grid ── */}
         <div
-          className="py-16 grid grid-cols-1 md:grid-cols-3 gap-12"
+          className="py-16 grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12"
           style={{ borderBottom: '1px solid rgba(255,255,255,0.1)' }}
         >
 
-          {/* 1. Logo + tagline */}
-          <div className="flex flex-col items-center">
-            {/* text-align:center גורם לתמונה (inline) להיחתך שווה משני הצדדים,
-                כך שאזור הטקסט של הלוגו מופיע בדיוק באמצע */}
+          {/* 1. Navigation — first on mobile, middle on desktop */}
+          <div className="flex flex-col items-center md:items-start order-1 md:order-2">
+            <h4
+              className="text-sm font-semibold mb-6"
+              style={{ color: '#FFFFFF', letterSpacing: '0.05em' }}
+            >
+              ניווט
+            </h4>
+            <nav className="flex flex-col gap-3.5 items-center md:items-start">
+              {nav.map((item) => (
+                <Link
+                  key={item.href}
+                  to={item.href}
+                  className="text-sm font-light transition-colors duration-200"
+                  style={{ color: '#CBD5E1' }}
+                  onMouseEnter={(e) => (e.currentTarget.style.color = '#FFFFFF')}
+                  onMouseLeave={(e) => (e.currentTarget.style.color = '#CBD5E1')}
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </nav>
+          </div>
+
+          {/* 2. Contact — second on mobile, last on desktop */}
+          <div className="flex flex-col items-center md:items-start order-2 md:order-3">
+            <h4
+              className="text-sm font-semibold mb-6"
+              style={{ color: '#FFFFFF', letterSpacing: '0.05em' }}
+            >
+              פרטי קשר
+            </h4>
+            <div className="flex flex-col gap-5 items-center md:items-start">
+              <div className="text-center md:text-right">
+                <p className="text-xs mb-1" style={{ color: '#64748B' }}>טלפון</p>
+                <a
+                  href={`tel:${siteConfig.phone.replace(/-/g, '')}`}
+                  className="text-sm font-light transition-colors duration-200"
+                  style={{ color: '#CBD5E1' }}
+                  onMouseEnter={(e) => (e.currentTarget.style.color = '#FFFFFF')}
+                  onMouseLeave={(e) => (e.currentTarget.style.color = '#CBD5E1')}
+                >
+                  {siteConfig.phone}
+                </a>
+              </div>
+              <div className="text-center md:text-right">
+                <p className="text-xs mb-1" style={{ color: '#64748B' }}>אימייל</p>
+                <a
+                  href={`mailto:${siteConfig.email}`}
+                  className="text-sm font-light transition-colors duration-200"
+                  style={{ color: '#CBD5E1' }}
+                  onMouseEnter={(e) => (e.currentTarget.style.color = '#FFFFFF')}
+                  onMouseLeave={(e) => (e.currentTarget.style.color = '#CBD5E1')}
+                >
+                  {siteConfig.email}
+                </a>
+              </div>
+              <div className="text-center md:text-right">
+                <p className="text-xs mb-1" style={{ color: '#64748B' }}>כתובת</p>
+                <span className="text-sm font-light" style={{ color: '#CBD5E1' }}>
+                  {siteConfig.address}
+                </span>
+              </div>
+            </div>
+          </div>
+
+          {/* 3. Logo — last on mobile, first (rightmost) on desktop */}
+          <div className="flex flex-col items-center order-3 md:order-1">
+            {/* קו הפרדה מעל הלוגו במובייל בלבד */}
+            <div className="w-16 h-px mb-10 md:hidden" style={{ backgroundColor: 'rgba(255,255,255,0.15)' }} />
+
             <div style={{ overflow: 'hidden', height: '120px', width: 300, textAlign: 'center' }}>
               <img
                 src="/assets/logo.png"
@@ -37,76 +104,10 @@ export default function Footer() {
             </p>
             <div className="h-px mt-5" style={{ backgroundColor: '#516A73', width: 40 }} />
           </div>
-
-          {/* 2. Navigation */}
-          <div className="flex flex-col">
-            <h4
-              className="text-sm font-semibold mb-6"
-              style={{ color: '#FFFFFF', letterSpacing: '0.05em' }}
-            >
-              ניווט
-            </h4>
-            <nav className="flex flex-col gap-3.5">
-              {nav.map((item) => (
-                <Link
-                  key={item.href}
-                  to={item.href}
-                  className="text-sm font-light transition-colors duration-200 w-fit"
-                  style={{ color: '#CBD5E1' }}
-                  onMouseEnter={(e) => (e.currentTarget.style.color = '#FFFFFF')}
-                  onMouseLeave={(e) => (e.currentTarget.style.color = '#CBD5E1')}
-                >
-                  {item.label}
-                </Link>
-              ))}
-            </nav>
-          </div>
-
-          {/* 3. Contact */}
-          <div className="flex flex-col">
-            <h4
-              className="text-sm font-semibold mb-6"
-              style={{ color: '#FFFFFF', letterSpacing: '0.05em' }}
-            >
-              פרטי קשר
-            </h4>
-            <div className="flex flex-col gap-5">
-              <div>
-                <p className="text-xs mb-1" style={{ color: '#64748B' }}>טלפון</p>
-                <a
-                  href={`tel:${siteConfig.phone.replace(/-/g, '')}`}
-                  className="text-sm font-light transition-colors duration-200"
-                  style={{ color: '#CBD5E1' }}
-                  onMouseEnter={(e) => (e.currentTarget.style.color = '#FFFFFF')}
-                  onMouseLeave={(e) => (e.currentTarget.style.color = '#CBD5E1')}
-                >
-                  {siteConfig.phone}
-                </a>
-              </div>
-              <div>
-                <p className="text-xs mb-1" style={{ color: '#64748B' }}>אימייל</p>
-                <a
-                  href={`mailto:${siteConfig.email}`}
-                  className="text-sm font-light transition-colors duration-200"
-                  style={{ color: '#CBD5E1' }}
-                  onMouseEnter={(e) => (e.currentTarget.style.color = '#FFFFFF')}
-                  onMouseLeave={(e) => (e.currentTarget.style.color = '#CBD5E1')}
-                >
-                  {siteConfig.email}
-                </a>
-              </div>
-              <div>
-                <p className="text-xs mb-1" style={{ color: '#64748B' }}>כתובת</p>
-                <span className="text-sm font-light" style={{ color: '#CBD5E1' }}>
-                  {siteConfig.address}
-                </span>
-              </div>
-            </div>
-          </div>
         </div>
 
         {/* ── Bottom bar ── */}
-        <div className="py-5 flex flex-col sm:flex-row items-center justify-between gap-2">
+        <div className="py-5 flex flex-col sm:flex-row items-center justify-between gap-2 text-center">
           <p className="text-xs" style={{ color: '#FFFFFF' }}>
             © כל הזכויות שמורות לשירה קופמן
           </p>
