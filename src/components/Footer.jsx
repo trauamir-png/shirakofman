@@ -33,6 +33,15 @@ export default function Footer() {
                   {item.label}
                 </Link>
               ))}
+              <Link
+                to="/privacy-policy"
+                className="text-sm font-light transition-colors duration-200"
+                style={{ color: '#CBD5E1' }}
+                onMouseEnter={(e) => (e.currentTarget.style.color = '#FFFFFF')}
+                onMouseLeave={(e) => (e.currentTarget.style.color = '#CBD5E1')}
+              >
+                מדיניות פרטיות
+              </Link>
             </nav>
           </div>
 
