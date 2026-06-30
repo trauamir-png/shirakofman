@@ -12,8 +12,8 @@ export default function Footer() {
           style={{ borderBottom: '1px solid rgba(255,255,255,0.1)' }}
         >
 
-          {/* 1. Navigation — first on mobile, middle on desktop */}
-          <div className="flex flex-col items-center md:items-start order-1 md:order-2">
+          {/* 1. Navigation — second on mobile, middle on desktop */}
+          <div className="flex flex-col items-center md:items-start order-2 md:order-2">
             <h4
               className="text-sm font-semibold mb-6"
               style={{ color: '#FFFFFF', letterSpacing: '0.05em' }}
@@ -36,8 +36,8 @@ export default function Footer() {
             </nav>
           </div>
 
-          {/* 2. Contact — second on mobile, last on desktop */}
-          <div className="flex flex-col items-center md:items-start order-2 md:order-3">
+          {/* 2. Contact — third on mobile, last on desktop */}
+          <div className="flex flex-col items-center md:items-start order-3 md:order-3">
             <h4
               className="text-sm font-semibold mb-6"
               style={{ color: '#FFFFFF', letterSpacing: '0.05em' }}
@@ -78,10 +78,8 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* 3. Logo — last on mobile, first (rightmost) on desktop */}
-          <div className="flex flex-col items-center order-3 md:order-1">
-            {/* קו הפרדה מעל הלוגו במובייל בלבד */}
-            <div className="w-16 h-px mb-10 md:hidden" style={{ backgroundColor: 'rgba(255,255,255,0.15)' }} />
+          {/* 3. Logo — first on mobile, first (rightmost) on desktop */}
+          <div className="flex flex-col items-center order-1 md:order-1">
 
             <div style={{ overflow: 'hidden', height: '120px', width: 300, textAlign: 'center' }}>
               <img

@@ -91,10 +91,6 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-40">
-          <div className="w-px h-10" style={{ backgroundColor: '#0F172A' }} />
-          <span className="text-xs" style={{ color: '#0F172A' }}>גלול</span>
-        </div>
       </section>
 
       {/* ─── TRUST STRIP ─── */}
