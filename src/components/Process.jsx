@@ -23,7 +23,7 @@ export default function Process() {
 
         {/* Steps */}
         <div className="relative">
-          {/* Connecting line — desktop */}
+          {/* Connecting line - desktop */}
           <div
             className="hidden lg:block absolute top-12 right-0 left-0 h-px"
             style={{ backgroundColor: '#E5E7EB', zIndex: 0 }}

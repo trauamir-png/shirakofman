@@ -27,7 +27,7 @@ export default function AboutPage() {
               <div className="relative overflow-hidden" style={{ aspectRatio: '4/5', maxWidth: 460 }}>
                 <img
                   src="/assets/portrait.jpg"
-                  alt="שירה קופמן — עורכת דין ומגשרת"
+                  alt="שירה קופמן - עורכת דין ומגשרת"
                   className="w-full h-full object-cover object-top"
                   style={{ filter: 'saturate(0.9)' }}
                 />

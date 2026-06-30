@@ -24,7 +24,7 @@ export default function Hero() {
 
       <div className="max-w-7xl mx-auto px-5 md:px-10 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center py-16 lg:py-24">
-          {/* Text — RTL: text on right side first in markup */}
+          {/* Text - RTL: text on right side first in markup */}
           <div className="flex flex-col justify-center order-2 lg:order-1">
             {/* Eyebrow */}
             <div className="flex items-center gap-3 mb-6">
@@ -108,7 +108,7 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Portrait — left side visually (right in DOM for RTL) */}
+          {/* Portrait - left side visually (right in DOM for RTL) */}
           <div className="order-1 lg:order-2 flex justify-center lg:justify-start">
             <div className="relative">
               {/* Decorative frame */}
@@ -119,7 +119,7 @@ export default function Hero() {
               <div className="relative z-10 overflow-hidden" style={{ maxWidth: 440 }}>
                 <img
                   src="/assets/portrait.jpg"
-                  alt="שירה קופמן — עורכת דין, מגשרת ונוטריון"
+                  alt="שירה קופמן - עורכת דין, מגשרת ונוטריון"
                   className="w-full h-auto object-cover object-top"
                   style={{
                     maxHeight: '580px',

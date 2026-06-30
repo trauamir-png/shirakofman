@@ -82,7 +82,7 @@ export default function HomePage() {
                 <div className="relative z-10 overflow-hidden" style={{ maxWidth: 440 }}>
                   <img
                     src="/assets/portrait.jpg"
-                    alt="שירה קופמן — עורכת דין, מגשרת ונוטריון"
+                    alt="שירה קופמן - עורכת דין, מגשרת ונוטריון"
                     className="w-full h-auto object-cover object-top"
                     style={{ maxHeight: '580px', filter: 'brightness(0.97) contrast(1.02)' }}
                   />

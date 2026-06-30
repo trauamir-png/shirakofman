@@ -19,7 +19,7 @@ export default function About() {
               >
                 <img
                   src="/assets/portrait.jpg"
-                  alt="שירה קופמן — עורכת דין ומגשרת"
+                  alt="שירה קופמן - עורכת דין ומגשרת"
                   className="w-full h-full object-cover object-top"
                   style={{ filter: 'saturate(0.9)' }}
                   onError={(e) => {
