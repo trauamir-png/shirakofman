@@ -49,7 +49,7 @@ export default function AboutPage() {
               <div className="p-6 border-r-2 mb-10" style={{ backgroundColor: '#fff', borderRightColor: '#516A73' }}>
                 <div className="grid grid-cols-3 gap-6 text-center">
                   {[
-                    { title: 'עו״ד', sub: 'עורכת דין' },
+                    { title: 'עו״ד', sub: 'לענייני משפחה' },
                     { title: 'מגשרת', sub: 'מוסמכת' },
                     { title: 'נוטריון', sub: 'מורשה' },
                   ].map((c) => (
